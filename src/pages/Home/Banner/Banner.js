@@ -3,7 +3,7 @@ import bannerImg from '../../../images/main-banner.png'
 
 const Banner = () => {
     return (
-        <div className="banner-bg py-3">
+        <div className="banner-bg py-3 mt-5">
             <div className="container py-3">
                 <div className="row d-flex align-items-center">
                     <div className="col-md-6">
