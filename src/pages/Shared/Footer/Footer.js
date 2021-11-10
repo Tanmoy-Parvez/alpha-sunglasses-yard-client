@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr className="bg-light" />
-            <p className="text-white text-center">Copyright &copy; 2022 || All rights reserved by Jerin's Parlour.</p>
+            <p className="text-white text-center">Copyright &copy; 2022 || All rights reserved by Alpha Sunglasses Yard.</p>
 
         </div >
     );

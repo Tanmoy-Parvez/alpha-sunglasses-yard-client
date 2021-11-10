@@ -8,7 +8,7 @@ const Reviews = () => {
             <h2 className="fw-bold text-uppercase">Customers <span className="green-text">Reviews</span> </h2>
             <Row xs={1} md={3} className="g-5 my-3">
                 <Col>
-                    <Card className="border-0 py-3 card-hover">
+                    <Card className="border-0 py-3">
                         <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
                         <Card.Body>
                             <Card.Title>Nash Patrik</Card.Title>
@@ -28,7 +28,7 @@ const Reviews = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 py-3 card-hover">
+                    <Card className="border-0 py-3">
                         <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
                         <Card.Body>
                             <Card.Title>Nash Patrik</Card.Title>
@@ -48,7 +48,7 @@ const Reviews = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="border-0 py-3 card-hover">
+                    <Card className="border-0 py-3">
                         <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
                         <Card.Body>
                             <Card.Title>Nash Patrik</Card.Title>
