@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Home from './pages/Home/Home/Home';
+import SignIn from './pages/Login/SignIn/SignIn';
+import SignUp from './pages/Login/SignUp/SignUp';
 import NotFound from './pages/NotFound/NotFound';
 
 function App() {
@@ -15,6 +17,12 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/signIn">
+            <SignIn />
+          </Route>
+          <Route path="/signUp">
+            <SignUp />
           </Route>
           <Route path="/dashboard">
             <Dashboard />

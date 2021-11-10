@@ -24,7 +24,7 @@ const NavigationBar = () => {
                             <Link to="/home">Home</Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <Link to="/login">Login</Link>
+                            <Link to="/signIn">Login</Link>
                         </Nav.Link>
                         <Nav.Link>
                             <Link to="/dashboard">Dashboard</Link>

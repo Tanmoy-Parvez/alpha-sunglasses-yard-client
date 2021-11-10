@@ -21,7 +21,11 @@ const Dashboard = () => {
                     <div className="collapse" id="navbarToggleExternalContent">
                         <div className="bg-dark p-3">
                             <h5 className="text-white ps-4">Dashboard</h5>
+
                             <ul>
+                                <li className="nav-items">
+                                    <Link to="/">Home</Link>
+                                </li>
                                 <li className="nav-items">
                                     <Link to={`${url}/blogs`}>Blogs</Link>
                                 </li>
