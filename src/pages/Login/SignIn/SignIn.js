@@ -10,12 +10,12 @@ const SignIn = () => {
     return (
         <div>
             <NavigationBar />
-            <div className="container mt-5 pt-5">
+            <div className="container mt-4 pt-5">
                 <div className="row d-flex align-items-center">
                     <div className="col-md-7">
                         <img src={loginImg} alt="" className="img-fluid" />
                     </div>
-                    <div className="col-md-5 text-center">
+                    <div className="col-md-5 text-center mt-3">
                         <div className="mx-auto shadow-lg py-5 rounded-3">
                             <img src={logo} alt="" className="w-25" />
                             <h4 className="my-3 text-uppercase green-text">Explore More By Sign in</h4>

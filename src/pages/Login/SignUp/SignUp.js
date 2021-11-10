@@ -18,7 +18,7 @@ const SignUp = () => {
                         <img src={loginImg} alt="" className="img-fluid" />
                     </div>
                     <div className="col-md-5 text-center">
-                        <div className="rounded-3 mx-auto shadow-lg py-4">
+                        <div className="rounded-3 mx-auto shadow-lg py-4 mt-2">
                             <img src={logo} alt="" className="w-25" />
                             <h5 className="my-3 text-uppercase green-text">Explore More By Sign Up</h5>
                             <form onSubmit={handleSubmit(onSubmit)}>
