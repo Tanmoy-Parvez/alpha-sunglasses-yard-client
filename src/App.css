@@ -14,3 +14,12 @@
 .green-text {
   color: #06d38edc;
 }
+
+.nav-items a {
+  text-decoration: none;
+
+  color: #29f5b1dc;
+}
+.nav-items a:hover {
+  color: #09b67cdc;
+}

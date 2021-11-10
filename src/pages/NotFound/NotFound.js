@@ -6,7 +6,7 @@ import errorImg from '../../images/404-png.png'
 const NotFound = () => {
     // 404 error message page
     return (
-        <div className="container">
+        <div className="container text-center">
             <div className="my-5">
                 <img src={errorImg} alt="" className="img-fluid" />
             </div>

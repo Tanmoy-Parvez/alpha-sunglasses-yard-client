@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.png'
 
 const NavigationBar = () => {
@@ -18,9 +19,16 @@ const NavigationBar = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ms-auto">
-                        <Nav.Link href="">Home</Nav.Link>
-                        <Nav.Link href="">Login</Nav.Link>
+                    <Nav className="ms-auto text-center nav-items">
+                        <Nav.Link>
+                            <Link to="/home">Home</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to="/login">Login</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to="/dashboard">Dashboard</Link>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

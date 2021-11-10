@@ -3,7 +3,7 @@ import logo from '../../../images/logo.png'
 const Footer = () => {
     return (
         <div className="green-bg pt-5">
-            <div className="row container text-white mx-auto">
+            <div className="row container text-white mx-auto py-4">
                 <div className="col-md-4 ">
                     <h6> <i className="fas fa-map-marker-alt fs-5"></i> H#000(0th Floor),Road #00,</h6>
                     <h6>New DOSH,Mohakhali,Dhaka,Bangladesh</h6>
