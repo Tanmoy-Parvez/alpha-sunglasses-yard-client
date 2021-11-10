@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../../images/logo.png'
 const Footer = () => {
     return (
-        <div className="green-bg pt-5 pb-2">
+        <div className="green-bg pt-5">
             <div className="row container text-white mx-auto">
                 <div className="col-md-4 ">
                     <h6> <i className="fas fa-map-marker-alt fs-5"></i> H#000(0th Floor),Road #00,</h6>
@@ -35,9 +35,10 @@ const Footer = () => {
                     <i className="fab fa-youtube fs-3 ms-3"></i>
                 </div>
             </div>
-            <hr className="bg-light" />
-            <p className="text-white text-center">Copyright &copy; 2022 || All rights reserved by Alpha Sunglasses Yard.</p>
+            <div className="bg-dark pb-2 pt-4">
+                <p className="text-white text-center">Copyright &copy; 2022 || All rights reserved by Alpha Sunglasses Yard.</p>
 
+            </div>
         </div >
     );
 };

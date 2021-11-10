@@ -4,7 +4,7 @@ import logo from '../../../images/logo.png'
 
 const NavigationBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" fixed="top" className="green-bg" variant="dark">
+        <Navbar collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">
                     <img
