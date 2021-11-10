@@ -1,3 +1,16 @@
-.App {
-  text-align: center;
+.regular-btn {
+  background-color: #06d38edc;
+  color: #fff;
+  padding: 0px 30px;
+}
+
+.banner-bg {
+  background-color: #06d38f0a;
+}
+
+.green-bg {
+  background-color: #06d38edc;
+}
+.green-text {
+  color: #06d38edc;
 }
