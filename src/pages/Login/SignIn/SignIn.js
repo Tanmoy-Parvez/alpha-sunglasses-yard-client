@@ -2,11 +2,19 @@ import React from 'react';
 import loginImg from '../../../images/login.png';
 import logo from '../../../images/logo.png';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import NavigationBar from '../../Shared/NavigationBar/NavigationBar';
+import useAuth from '../../../hooks/useAuth';
 const SignIn = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { signInUser } = useAuth()
+
+    const location = useLocation();
+    const history = useHistory();
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        signInUser(data.email, data.password, location, history)
+    };
     return (
         <div>
             <NavigationBar />
@@ -27,21 +35,18 @@ const SignIn = () => {
                                     className="form-control rounded-pill w-75 mx-auto py-2 px-3"
                                     placeholder="Enter your email "
                                 />
-                                {errors.email && <span>This field is required</span>}
 
                                 <input
                                     {...register("password", { required: true })}
                                     type="password"
-                                    className="form-control my-3 rounded-pill w-75 mx-auto py-2 px-3"
+                                    className="form-control my-4 rounded-pill w-75 mx-auto py-2 px-3"
                                     placeholder="Enter your password"
                                 />
 
-                                {errors.password && <span>This field is required</span>}
-
-                                <input
+                                <button
                                     type="submit"
-                                    value="Sign in"
-                                    className="form-control rounded-pill green-bg text-white w-75 mx-auto py-2 px-3" />
+                                    className="btn rounded-pill green-bg text-white w-75 mx-auto py-2 px-3" >Sign in
+                                </button>
                             </form>
                             <p className="my-3">Let us help you explore more.</p>
                             <p className="my-3">Don't have an account? <Link to="/signUp" className="green-text">Create an account</Link>.</p>

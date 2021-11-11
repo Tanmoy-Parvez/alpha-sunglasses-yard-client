@@ -9,12 +9,11 @@ import useAuth from '../../../hooks/useAuth';
 
 const SignUp = () => {
     const { signUpUser } = useAuth()
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit } = useForm();
     const history = useHistory()
 
     const onSubmit = data => {
         signUpUser(data.email, data.password, data.name, history)
-        reset()
     };
     return (
         <div>
@@ -36,29 +35,27 @@ const SignUp = () => {
                                     className="form-control rounded-pill w-75 mx-auto py-2 px-3"
                                     placeholder="Full Name"
                                 />
-                                {errors.email && <span>This field is required</span>}
 
                                 <input
                                     {...register("email", { required: true })}
                                     type="email"
-                                    className="form-control rounded-pill  my-3  w-75 mx-auto py-2 px-3"
+                                    className="form-control rounded-pill  mt-3  w-75 mx-auto py-2 px-3"
                                     placeholder="Email"
                                 />
-                                {errors.email && <span>This field is required</span>}
 
                                 <input
                                     {...register("password", { required: true })}
                                     type="password"
-                                    className="form-control rounded-pill w-75 mx-auto py-2 px-3"
+                                    className="form-control rounded-pill w-75 mx-auto mt-3 py-2 px-3"
                                     placeholder="Password"
                                 />
 
-                                {errors.password && <span>This field is required</span>}
 
-                                <input
+
+                                <button
                                     type="submit"
-                                    value="Sign Up"
-                                    className="form-control rounded-pill green-bg text-white w-75 mx-auto py-2 px-3 mt-3" />
+                                    className="btn rounded-pill green-bg text-white w-75 mx-auto py-2 px-3 mt-3" >Sign Up
+                                </button>
                             </form>
                             <p className="my-3">Let us help you explore more.</p>
                             <p className="my-3">Already have an account? <Link to="/signIn" className="green-text">Sign in</Link>.</p>
