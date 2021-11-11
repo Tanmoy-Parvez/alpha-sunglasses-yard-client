@@ -34,10 +34,12 @@ const NavigationBar = () => {
                             <Link to="/dashboard">Dashboard</Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <Link to="/" className="text-white">{user?.displayName}</Link>
+                            <Link to="/" className="text-warning">{user?.displayName}</Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <button onClick={logOut} className="btn btn-danger">Logout</button>
+                            <button onClick={logOut} className="btn btn-outline-none p-0 text-white">
+                                <i className="fas fa-sign-out-alt"></i>  Logout
+                            </button>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

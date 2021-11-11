@@ -22,40 +22,59 @@ const Dashboard = () => {
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
-                            <h4 className="text-white me-5 pe-3">Dashboard</h4>
+                            <h5 className="text-white text-uppercase me-5 pe-3">
+                                <i className="fas fa-columns"></i> Dashboard
+                            </h5>
                         </div>
                     </nav>
                     <div className="show" id="navbarToggleExternalContent">
                         <div className="purple-bg p-3" style={{ height: "100vh" }}>
-                            <h4 className="text-white ps-4">{user?.displayName}</h4>
-
+                            {user?.email && <h4 className="text-light ps-4 mb-3">
+                                <i className="fas fa-user-circle"></i> {user?.displayName}
+                            </h4>}
                             <ul className="menu-list">
                                 <li className="nav-items">
-                                    <Link to="/">Home</Link>
+                                    <Link to="/">
+                                        <i className="fas fa-home"></i> Home
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/myorders`}>My Orders</Link>
+                                    <Link to={`${url}/myorders`}>
+                                        <i className="fas fa-shopping-cart"></i>  My Orders
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/review`}>Review</Link>
+                                    <Link to={`${url}/review`}>
+                                        <i className="fas fa-star"></i> Review
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/pay`}>Payment</Link>
+                                    <Link to={`${url}/pay`}>
+                                        <i className="fas fa-dollar-sign"></i> Payment
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/addProduct`}>Add A Product</Link>
+                                    <Link to={`${url}/addProduct`}>
+                                        <i className="fas fa-plus-circle"></i> Add A Product
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/makeAdmin`}>Make An Admin</Link>
+                                    <Link to={`${url}/makeAdmin`}>
+                                        <i className="fas fa-user-plus"></i> Make An Admin
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
+                                    <Link to={`${url}/manageOrders`}>
+                                        <i className="fas fa-tasks"></i>  Manage All Orders
+                                    </Link>
                                 </li>
                                 <li className="nav-items">
-                                    <Link to={`${url}/manageProducts`}>Manage Products</Link>
+                                    <Link to={`${url}/manageProducts`}>
+                                        <i className="fas fa-cart-plus"></i> Manage Products
+                                    </Link>
                                 </li>
                             </ul>
-                            <button className="btn btn-outline-light ms-4">
+                            <button onClick={logOut} className="btn btn-outline-light ms-4">
                                 <i className="fas fa-sign-out-alt"></i> Logout
                             </button>
                         </div>
@@ -84,7 +103,6 @@ const Dashboard = () => {
                         <Route exact path={`${path}/makeAdmin`}>
                             <MakeAdmin />
                         </Route>
-
                     </Switch>
                 </div>
             </div>
