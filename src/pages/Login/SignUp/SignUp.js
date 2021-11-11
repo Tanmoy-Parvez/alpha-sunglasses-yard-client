@@ -2,13 +2,20 @@ import React from 'react';
 import loginImg from '../../../images/signUp.png';
 import logo from '../../../images/logo.png';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import NavigationBar from '../../Shared/NavigationBar/NavigationBar';
+import useAuth from '../../../hooks/useAuth';
 
 
 const SignUp = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { signUpUser } = useAuth()
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const history = useHistory()
+
+    const onSubmit = data => {
+        signUpUser(data.email, data.password, data.name, history)
+        reset()
+    };
     return (
         <div>
             <NavigationBar />

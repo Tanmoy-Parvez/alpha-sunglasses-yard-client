@@ -5,8 +5,6 @@ import AddProduct from '../Admin/AddProduct/AddProduct';
 import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import ManageOrders from '../Admin/ManageOrders/ManageOrders';
 import ManageProducts from '../Admin/ManageProducts/ManageProducts';
-import Blogs from '../Home/Blogs/Blogs';
-import Reviews from '../Home/Reviews/Reviews';
 import MyOrders from '../User/MyOrders/MyOrders';
 import Pay from '../User/Pay/Pay';
 import Review from '../User/Review/Review';
@@ -16,7 +14,7 @@ const Dashboard = () => {
     return (
         <div className="overflow-hidden">
             <div className="row">
-                <div className="col-md-3" style={{ minHeight: '500px' }}>
+                <div className="col-md-3">
                     <nav className="navbar navbar-dark bg-dark">
                         <div className="container">
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">

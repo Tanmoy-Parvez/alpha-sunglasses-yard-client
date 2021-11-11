@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo.png'
 
 const NavigationBar = () => {
+    const { user, logOut } = useAuth()
     return (
         <Navbar collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark">
             <Container>
@@ -20,14 +22,22 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto text-center nav-items">
+
                         <Nav.Link>
                             <Link to="/home">Home</Link>
                         </Nav.Link>
                         <Nav.Link>
                             <Link to="/signIn">Login</Link>
                         </Nav.Link>
+
                         <Nav.Link>
                             <Link to="/dashboard">Dashboard</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to="/" className="text-white">{user?.displayName}</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <button onClick={logOut} className="btn btn-danger">Logout</button>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
