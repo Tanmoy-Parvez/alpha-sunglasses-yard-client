@@ -22,7 +22,7 @@ const MakeAdmin = () => {
 
     // add new tour section
     return (
-        <div className="container my-5 pt-5 text-center">
+        <div className="container my-5 text-center">
             <div className="row">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">

@@ -18,7 +18,7 @@ const Review = () => {
 
     // add new tour section
     return (
-        <div className="container mb-5 mt-2 text-center">
+        <div className="container my-3 text-center">
             <div className="row">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">

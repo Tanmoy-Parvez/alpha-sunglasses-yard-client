@@ -6,17 +6,19 @@ import AddProduct from '../Admin/AddProduct/AddProduct';
 import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import ManageOrders from '../Admin/ManageOrders/ManageOrders';
 import ManageProducts from '../Admin/ManageProducts/ManageProducts';
+import Footer from '../Shared/Footer/Footer';
 import MyOrders from '../User/MyOrders/MyOrders';
 import Pay from '../User/Pay/Pay';
 import Review from '../User/Review/Review';
+import logo from '../../images/logo.png';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const { user, logOut } = useAuth()
     return (
-        <div style={{ height: '100vh' }}>
-            <div className="row">
-                <div className="col-md-3 ">
+        <div style={{ height: "100%" }}>
+            <div className="row g-1">
+                <div className="col-md-3 mb-3">
                     <nav className="navbar navbar-dark dark-purple-bg">
                         <div className="container">
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +31,7 @@ const Dashboard = () => {
                     </nav>
                     <div className="show" id="navbarToggleExternalContent">
                         <div className="purple-bg p-3" style={{ height: "100vh" }}>
-                            {user?.email && <h4 className="text-light ps-4 mb-3">
+                            {user?.email && <h4 className="text-light fw-bold ps-4 mb-3">
                                 <i className="fas fa-user-circle"></i> {user?.displayName}
                             </h4>}
                             <ul className="menu-list">
@@ -80,8 +82,19 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-9" style={{ height: "100%" }}>
+                    <div className="dark-purple-bg text-center text-light text-uppercase py-2">
+                        <h3>Welcome Back {user?.displayName}</h3>
+                    </div>
                     <Switch>
+                        <Route exact path={`${path}/`}>
+                            <div className="text-center my-5 pt-5" style={{ opacity: 0.2 }} >
+                                <div>
+                                    <img src={logo} className="img-fluid" alt="" />
+                                    <h2 className="mb-5 text-uppercase purple-text mt-2">Alpha Sunglasses Yard</h2>
+                                </div>
+                            </div>
+                        </Route>
                         <Route exact path={`${path}/myorders`}>
                             <MyOrders />
                         </Route>
@@ -106,6 +119,7 @@ const Dashboard = () => {
                     </Switch>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
