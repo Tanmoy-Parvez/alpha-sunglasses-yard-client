@@ -14,7 +14,7 @@ import logo from '../../images/logo.png';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { user, logOut } = useAuth()
+    const { user, logOut, admin } = useAuth();
     return (
         <div style={{ height: "100%" }}>
             <div className="row g-1">
@@ -40,6 +40,8 @@ const Dashboard = () => {
                                         <i className="fas fa-home"></i> Home
                                     </Link>
                                 </li>
+                            </ul>
+                            {!admin ? <ul className="menu-list text-start">
                                 <li className="nav-items">
                                     <Link to={`${url}/myorders`}>
                                         <i className="fas fa-shopping-cart"></i>  My Orders
@@ -55,27 +57,30 @@ const Dashboard = () => {
                                         <i className="fas fa-dollar-sign"></i> Payment
                                     </Link>
                                 </li>
-                                <li className="nav-items">
-                                    <Link to={`${url}/addProduct`}>
-                                        <i className="fas fa-plus-circle"></i> Add A Product
-                                    </Link>
-                                </li>
-                                <li className="nav-items">
-                                    <Link to={`${url}/makeAdmin`}>
-                                        <i className="fas fa-user-plus"></i> Make An Admin
-                                    </Link>
-                                </li>
-                                <li className="nav-items">
-                                    <Link to={`${url}/manageOrders`}>
-                                        <i className="fas fa-tasks"></i>  Manage All Orders
-                                    </Link>
-                                </li>
-                                <li className="nav-items">
-                                    <Link to={`${url}/manageProducts`}>
-                                        <i className="fas fa-cart-plus"></i> Manage Products
-                                    </Link>
-                                </li>
                             </ul>
+                                :
+                                <ul className="menu-list">
+                                    <li className="nav-items">
+                                        <Link to={`${url}/addProduct`}>
+                                            <i className="fas fa-plus-circle"></i> Add A Product
+                                        </Link>
+                                    </li>
+                                    <li className="nav-items">
+                                        <Link to={`${url}/makeAdmin`}>
+                                            <i className="fas fa-user-plus"></i> Make An Admin
+                                        </Link>
+                                    </li>
+                                    <li className="nav-items">
+                                        <Link to={`${url}/manageOrders`}>
+                                            <i className="fas fa-tasks"></i>  Manage All Orders
+                                        </Link>
+                                    </li>
+                                    <li className="nav-items">
+                                        <Link to={`${url}/manageProducts`}>
+                                            <i className="fas fa-cart-plus"></i> Manage Products
+                                        </Link>
+                                    </li>
+                                </ul>}
                             <button onClick={logOut} className="btn btn-outline-light ms-4">
                                 <i className="fas fa-sign-out-alt"></i> Logout
                             </button>
@@ -120,7 +125,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <Footer />
-        </div>
+        </div >
     );
 };
 

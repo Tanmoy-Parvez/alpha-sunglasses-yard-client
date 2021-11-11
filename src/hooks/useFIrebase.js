@@ -92,7 +92,7 @@ const useFirebase = () => {
     }
     // check admin or not
     useEffect(() => {
-        fetch(`https://doctors-portal-21k-server.herokuapp.com/users/${user?.email}`)
+        fetch(`http://localhost:5000/saveUser/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

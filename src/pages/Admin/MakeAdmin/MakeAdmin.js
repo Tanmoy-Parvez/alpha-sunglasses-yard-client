@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import logo from '../../../images/logo2.png';
@@ -7,16 +6,20 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        fetch("", {
+        const email = data.email;
+        fetch(`http://localhost:5000/makeAdmin/${email}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(data)
         })
-            .then(res => {
-                if (res.data.insertedId) {
-                    alert("Admin Successfully Added😃!")
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Successfully added an admin')
                     reset()
-                };
+                }
+                else {
+                    alert('Failed to add! No user found! or Already added!')
+                }
             })
     };
 
