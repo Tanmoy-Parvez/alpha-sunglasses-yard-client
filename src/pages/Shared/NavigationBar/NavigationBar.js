@@ -22,25 +22,27 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto text-center nav-items">
-
                         <Nav.Link>
                             <Link to="/home">Home</Link>
                         </Nav.Link>
-                        <Nav.Link>
+
+                        {!user?.email ? <Nav.Link>
                             <Link to="/signIn">Login</Link>
                         </Nav.Link>
-
-                        <Nav.Link>
-                            <Link to="/dashboard">Dashboard</Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/" className="text-warning">{user?.displayName}</Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <button onClick={logOut} className="btn btn-outline-none p-0 text-white">
-                                <i className="fas fa-sign-out-alt"></i>  Logout
-                            </button>
-                        </Nav.Link>
+                            :
+                            <Nav>
+                                <Nav.Link>
+                                    <Link to="/dashboard">Dashboard</Link>
+                                </Nav.Link>
+                                <Nav.Link>
+                                    <Link to="/" className="text-warning">{user?.displayName}</Link>
+                                </Nav.Link>
+                                <Nav.Link>
+                                    <button onClick={logOut} className="btn btn-outline-none p-0 text-white">
+                                        <i className="fas fa-sign-out-alt"></i>  Logout
+                                    </button>
+                                </Nav.Link>
+                            </Nav>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

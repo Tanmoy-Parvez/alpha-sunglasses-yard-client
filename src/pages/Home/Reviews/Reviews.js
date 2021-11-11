@@ -4,9 +4,9 @@ import img1 from '../../../images/Ellipse 92.png'
 
 const Reviews = () => {
     return (
-        <div className='container my-5 text-center'>
-            <h2 className="fw-bold text-uppercase">Customers <span className="purple-text">Reviews</span> </h2>
-            <Row xs={1} md={3} className="g-5 my-3">
+        <div className='banner-bg my-5 p-5 text-center'>
+            <h2 className="fw-bold text-uppercase mb-4">Customers <span className="purple-text">Reviews</span> </h2>
+            <Row xs={1} md={3} className="g-5">
                 <Col>
                     <Card className="border-0 py-3">
                         <Card.Img variant="top" src={img1} className="w-25 mx-auto" />

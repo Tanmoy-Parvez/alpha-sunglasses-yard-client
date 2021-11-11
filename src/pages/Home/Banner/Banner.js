@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bannerImg from '../../../images/main-banner.png'
 
 const Banner = () => {
@@ -17,7 +18,9 @@ const Banner = () => {
                         <h5 className="text-secondary w-75 my-4">
                             We have best of best trendy Sunglasses collections for both men and women.
                         </h5>
-                        <button className="btn regular-btn py-2">Explore More</button>
+                        <Link to="/allProducts">
+                            <button className="btn regular-btn py-2">Explore More</button>
+                        </Link>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center">
                         <img src={bannerImg} alt="" className="img-fluid w-75 bg-secondary rounded-circle" />
