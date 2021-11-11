@@ -20,7 +20,7 @@ const Banner = () => {
                         <button className="btn regular-btn py-2">Explore More</button>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center">
-                        <img src={bannerImg} alt="" className="img-fluid w-75 green-bg rounded-circle" />
+                        <img src={bannerImg} alt="" className="img-fluid w-75 bg-secondary rounded-circle" />
                     </div>
                 </div>
             </div>

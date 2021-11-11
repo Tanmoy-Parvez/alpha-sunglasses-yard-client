@@ -9,7 +9,7 @@ const Products = () => {
             <Row xs={1} md={3} className="g-5 mb-3">
                 <Col>
                     <Card className="border-0 py-3 card-hover">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <Card.Img variant="top" src={img1} className="mx-auto" />
                         <Card.Body>
                             <Card.Title>Anti Age Face Treatment</Card.Title>
                             <Card.Text>
@@ -24,7 +24,7 @@ const Products = () => {
                 </Col>
                 <Col>
                     <Card className="border-0 py-3 card-hover">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <Card.Img variant="top" src={img1} className="mx-auto" />
                         <Card.Body className="text-center">
                             <Card.Title>Anti Age Face Treatment</Card.Title>
                             <Card.Text>
@@ -39,7 +39,7 @@ const Products = () => {
                 </Col>
                 <Col>
                     <Card className="border-0 py-3 card-hover">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <Card.Img variant="top" src={img1} className="mx-auto" />
                         <Card.Body className="text-center">
                             <Card.Title>Anti Age Face Treatment</Card.Title>
                             <Card.Text>
@@ -54,7 +54,7 @@ const Products = () => {
                 </Col>
                 <Col>
                     <Card className="border-0 py-3 card-hover">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <Card.Img variant="top" src={img1} className="mx-auto" />
                         <Card.Body className="text-center">
                             <Card.Title>Anti Age Face Treatment</Card.Title>
                             <Card.Text>
@@ -69,7 +69,7 @@ const Products = () => {
                 </Col>
                 <Col>
                     <Card className="border-0 py-3 card-hover">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <Card.Img variant="top" src={img1} className="mx-auto" />
                         <Card.Body className="text-center">
                             <Card.Title>Anti Age Face Treatment</Card.Title>
                             <Card.Text>
@@ -84,7 +84,7 @@ const Products = () => {
                 </Col>
                 <Col>
                     <Card className="border-0 py-3 card-hover">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <Card.Img variant="top" src={img1} className="mx-auto" />
                         <Card.Body className="text-center">
                             <Card.Title>Anti Age Face Treatment</Card.Title>
                             <Card.Text>
