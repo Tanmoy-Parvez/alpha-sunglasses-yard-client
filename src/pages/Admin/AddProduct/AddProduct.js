@@ -7,10 +7,10 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post("https://traveller-dotcom-server.herokuapp.com/add", data)
+        axios.post("", data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert("😃New Tour Successfully Added!")
+                    alert("New Product Successfully Added😃!")
                     reset()
                 };
             })
