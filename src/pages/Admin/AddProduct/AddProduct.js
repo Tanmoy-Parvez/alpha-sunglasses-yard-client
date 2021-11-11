@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
-import logo from '../../../images/logo.png';
+import logo from '../../../images/logo2.png';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -18,13 +18,13 @@ const AddProduct = () => {
 
     // add new tour section
     return (
-        <div className="container mb-5 text-center">
+        <div className="container mb-5 mt-3 text-center">
             <div className="row">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">
                     <div className="pb-5 pt-3 rounded-3 mx-auto shadow-lg">
                         <img src={logo} alt="" className="w-25" />
-                        <h3 className="my-4 text-uppercase text-info">Add A New Product</h3>
+                        <h3 className="my-4 text-uppercase purple-text">Add A New Product</h3>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 {...register("name", { required: true })}
@@ -47,7 +47,10 @@ const AddProduct = () => {
                                 className="form-control w-75 mx-auto my-4"
                                 placeholder="Image Url"
                             />
-                            <input type="submit" value="Add" className="btn btn-info text-white w-75 mt-3" />
+                            <button
+                                type="submit"
+                                className="btn purple-bg text-white w-75 mx-auto py-2 px-3" >Add
+                            </button>
                         </form>
                     </div>
                 </div>

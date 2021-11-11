@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="App">
+    <div className="overflow-hidden">
       <AuthProvider>
         <BrowserRouter>
           <Switch>

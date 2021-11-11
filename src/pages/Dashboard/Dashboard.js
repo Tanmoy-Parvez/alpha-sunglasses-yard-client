@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import AddProduct from '../Admin/AddProduct/AddProduct';
 import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import ManageOrders from '../Admin/ManageOrders/ManageOrders';
@@ -11,23 +12,24 @@ import Review from '../User/Review/Review';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
+    const { user, logOut } = useAuth()
     return (
-        <div className="overflow-hidden">
+        <div style={{ height: '100vh' }}>
             <div className="row">
-                <div className="col-md-3">
-                    <nav className="navbar navbar-dark bg-dark">
+                <div className="col-md-3 ">
+                    <nav className="navbar navbar-dark dark-purple-bg">
                         <div className="container">
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
-                            <h4 className="text-white">Tanmoy Parvez</h4>
+                            <h4 className="text-white me-5 pe-3">Dashboard</h4>
                         </div>
                     </nav>
-                    <div className="collapse" id="navbarToggleExternalContent">
-                        <div className="bg-dark p-3">
-                            <h5 className="text-white ps-4">Dashboard</h5>
+                    <div className="show" id="navbarToggleExternalContent">
+                        <div className="purple-bg p-3" style={{ height: "100vh" }}>
+                            <h4 className="text-white ps-4">{user?.displayName}</h4>
 
-                            <ul>
+                            <ul className="menu-list">
                                 <li className="nav-items">
                                     <Link to="/">Home</Link>
                                 </li>
@@ -53,7 +55,9 @@ const Dashboard = () => {
                                     <Link to={`${url}/manageProducts`}>Manage Products</Link>
                                 </li>
                             </ul>
-                            <button className="btn btn-danger ms-4">Logout</button>
+                            <button className="btn btn-outline-light ms-4">
+                                <i className="fas fa-sign-out-alt"></i> Logout
+                            </button>
                         </div>
                     </div>
                 </div>
