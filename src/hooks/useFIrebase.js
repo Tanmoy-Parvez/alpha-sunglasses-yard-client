@@ -22,10 +22,8 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name };
                 setUser(newUser);
                 console.log('User successfully created');
-                //send user to the database
-
-                // saveUser(email, name, "POST")
-
+                //save an user to the database
+                saveUser(email, name, "POST")
                 // send name to firebase after creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -84,7 +82,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('', {
+        fetch('http://localhost:5000/saveUser', {
             method: method,
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user)
