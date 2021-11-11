@@ -1,6 +1,6 @@
 import React from 'react';
 import loginImg from '../../../images/login.png';
-import logo from '../../../images/logo.png';
+import logo from '../../../images/logo2.png';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import NavigationBar from '../../Shared/NavigationBar/NavigationBar';
@@ -18,13 +18,13 @@ const SignIn = () => {
     return (
         <div>
             <NavigationBar />
-            <div className="container mt-4 pt-5">
+            <div className="container mt-5 pt-5">
                 <div className="row d-flex align-items-center">
                     <div className="col-md-7">
                         <img src={loginImg} alt="" className="img-fluid" />
                     </div>
                     <div className="col-md-5 text-center mt-3">
-                        <div className="mx-auto shadow-lg py-5 rounded-3">
+                        <div className="mx-auto shadow-lg py-4 rounded-3">
                             <img src={logo} alt="" className="w-25" />
                             <h4 className="my-3 text-uppercase purple-text">Explore More By Sign in</h4>
                             <form onSubmit={handleSubmit(onSubmit)}>

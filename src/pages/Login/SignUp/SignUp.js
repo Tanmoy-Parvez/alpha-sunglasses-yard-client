@@ -1,6 +1,6 @@
 import React from 'react';
 import loginImg from '../../../images/signUp.png';
-import logo from '../../../images/logo.png';
+import logo from '../../../images/logo2.png';
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from 'react-router-dom';
 import NavigationBar from '../../Shared/NavigationBar/NavigationBar';

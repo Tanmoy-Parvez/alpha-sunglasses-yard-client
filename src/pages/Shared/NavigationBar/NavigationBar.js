@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import logo from '../../../images/logo.png'
+import logo from '../../../images/logo2.png'
 
 const NavigationBar = () => {
     const { user, logOut } = useAuth()
