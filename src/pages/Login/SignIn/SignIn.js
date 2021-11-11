@@ -26,7 +26,7 @@ const SignIn = () => {
                     <div className="col-md-5 text-center mt-3">
                         <div className="mx-auto shadow-lg py-5 rounded-3">
                             <img src={logo} alt="" className="w-25" />
-                            <h4 className="my-3 text-uppercase green-text">Explore More By Sign in</h4>
+                            <h4 className="my-3 text-uppercase purple-text">Explore More By Sign in</h4>
                             <form onSubmit={handleSubmit(onSubmit)}>
 
                                 <input
@@ -45,11 +45,11 @@ const SignIn = () => {
 
                                 <button
                                     type="submit"
-                                    className="btn rounded-pill green-bg text-white w-75 mx-auto py-2 px-3" >Sign in
+                                    className="btn rounded-pill purple-bg text-white w-75 mx-auto py-2 px-3" >Sign in
                                 </button>
                             </form>
                             <p className="my-3">Let us help you explore more.</p>
-                            <p className="my-3">Don't have an account? <Link to="/signUp" className="green-text">Create an account</Link>.</p>
+                            <p className="my-3">Don't have an account? <Link to="/signUp" className="purple-text">Create an account</Link>.</p>
                         </div>
                     </div>
                 </div>

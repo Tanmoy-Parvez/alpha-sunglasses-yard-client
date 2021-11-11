@@ -9,7 +9,7 @@ const Banner = () => {
                     <div className="col-md-6">
                         <h4>Special offer</h4>
                         <h1 className="text-uppercase fw-bold mt-4">
-                            Trendy <span className="green-text">Glasses</span>
+                            Trendy <span className="purple-text">Glasses</span>
                         </h1>
                         <h1 className="text-uppercase fw-bold">
                             For men & women

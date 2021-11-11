@@ -26,7 +26,7 @@ const SignUp = () => {
                     <div className="col-md-5 text-center">
                         <div className="rounded-3 mx-auto shadow-lg py-4 mt-2">
                             <img src={logo} alt="" className="w-25" />
-                            <h5 className="my-3 text-uppercase green-text">Explore More By Sign Up</h5>
+                            <h5 className="my-3 text-uppercase purple-text">Explore More By Sign Up</h5>
                             <form onSubmit={handleSubmit(onSubmit)}>
 
                                 <input
@@ -54,11 +54,11 @@ const SignUp = () => {
 
                                 <button
                                     type="submit"
-                                    className="btn rounded-pill green-bg text-white w-75 mx-auto py-2 px-3 mt-3" >Sign Up
+                                    className="btn rounded-pill purple-bg text-white w-75 mx-auto py-2 px-3 mt-3" >Sign Up
                                 </button>
                             </form>
                             <p className="my-3">Let us help you explore more.</p>
-                            <p className="my-3">Already have an account? <Link to="/signIn" className="green-text">Sign in</Link>.</p>
+                            <p className="my-3">Already have an account? <Link to="/signIn" className="purple-text">Sign in</Link>.</p>
                         </div>
                     </div>
                 </div>

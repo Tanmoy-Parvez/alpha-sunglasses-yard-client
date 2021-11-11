@@ -5,7 +5,7 @@ import img1 from '../../../images/Ellipse 92.png'
 const Reviews = () => {
     return (
         <div className='container my-5 text-center'>
-            <h2 className="fw-bold text-uppercase">Customers <span className="green-text">Reviews</span> </h2>
+            <h2 className="fw-bold text-uppercase">Customers <span className="purple-text">Reviews</span> </h2>
             <Row xs={1} md={3} className="g-5 my-3">
                 <Col>
                     <Card className="border-0 py-3">

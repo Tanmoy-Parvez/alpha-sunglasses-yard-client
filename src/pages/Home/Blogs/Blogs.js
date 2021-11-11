@@ -7,7 +7,7 @@ import blog3 from '../../../images/blog-img/blog3.jpg'
 const Blogs = () => {
     return (
         <div className="container text-center text-uppercase">
-            <h1 className="fw-bold">From The <span className="green-text">Blogs</span> </h1>
+            <h1 className="fw-bold">From The <span className="purple-text">Blogs</span> </h1>
             <Row xs={1} md={3} className="my-3">
                 <Col>
                     <Card className="border-0 py-3">
