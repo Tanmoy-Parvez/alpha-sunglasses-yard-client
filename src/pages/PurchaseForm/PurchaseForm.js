@@ -33,7 +33,7 @@ const PurchaseForm = () => {
                 };
             })
     };
-    // booking section
+
     return (
         <div className="container my-5 pt-3">
             <NavigationBar />
@@ -88,9 +88,9 @@ const PurchaseForm = () => {
                                 placeholder="Address"
                             />
                             {errors.address && <span className="text-danger">*This field is required</span>}
-                            {product?.title && <input
-                                defaultValue={product?.title}
-                                {...register("title", { required: true })}
+                            {product?.name && <input
+                                defaultValue={product?.name}
+                                {...register("itemName", { required: true })}
                                 className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0 mt-3 "
                                 placeholder="Tour title"
                             />}
