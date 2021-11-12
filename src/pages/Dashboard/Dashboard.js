@@ -11,6 +11,7 @@ import MyOrders from '../User/MyOrders/MyOrders';
 import Pay from '../User/Pay/Pay';
 import Review from '../User/Review/Review';
 import logo from '../../images/logo.png';
+import AdminRoute from '../AdminRoute/AdminRoute';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -109,18 +110,18 @@ const Dashboard = () => {
                         <Route exact path={`${path}/pay`}>
                             <Pay />
                         </Route>
-                        <Route exact path={`${path}/manageOrders`}>
+                        <AdminRoute exact path={`${path}/manageOrders`}>
                             <ManageOrders />
-                        </Route>
-                        <Route exact path={`${path}/addProduct`}>
+                        </AdminRoute>
+                        <AdminRoute exact path={`${path}/addProduct`}>
                             <AddProduct />
-                        </Route>
-                        <Route exact path={`${path}/manageProducts`}>
+                        </AdminRoute>
+                        <AdminRoute exact path={`${path}/manageProducts`}>
                             <ManageProducts />
-                        </Route>
-                        <Route exact path={`${path}/makeAdmin`}>
+                        </AdminRoute>
+                        <AdminRoute exact path={`${path}/makeAdmin`}>
                             <MakeAdmin />
-                        </Route>
+                        </AdminRoute>
                     </Switch>
                 </div>
             </div>
