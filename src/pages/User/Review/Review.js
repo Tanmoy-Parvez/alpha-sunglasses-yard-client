@@ -1,13 +1,15 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
+import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo2.png';
 
 const Review = () => {
+    const { user } = useAuth()
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post("", data)
+        axios.post("http://localhost:5000/reviews", data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Your Review Successfully Sent😃!")
@@ -26,16 +28,16 @@ const Review = () => {
                         <img src={logo} alt="" className="w-25" />
                         <h4 className="my-4 text-uppercase purple-text">Give your valuable Review</h4>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input
-                                {...register("username", { required: true })}
+                            {user?.displayName && <input
+                                {...register("name")}
+                                defaultValue={user?.displayName}
                                 className="form-control w-75 mx-auto"
-                                placeholder="Name"
-                            />
-                            <input
-                                {...register("email", { required: true })}
+                            />}
+                            {user?.email && <input
+                                {...register("email")}
                                 className="form-control w-75 my-4 mx-auto"
-                                placeholder="Email"
-                            />
+                                defaultValue={user?.email}
+                            />}
                             <textarea
                                 {...register("message", { required: true })}
                                 className="form-control w-75 mx-auto"
