@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row, Spinner } from 'react-bootstrap';
-
+import Rating from "react-rating"
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -33,11 +33,12 @@ const Reviews = () => {
                                     <Card.Text>
                                         {review?.message}
                                     </Card.Text>
-                                    <i className="fas fa-star text-warning"></i>
-                                    <i className="fas fa-star text-warning mx-2"></i>
-                                    <i className="fas fa-star text-warning "></i>
-                                    <i className="fas fa-star text-warning mx-2"></i>
-                                    <i className="fas fa-star text-warning"></i>
+                                    <Rating
+                                        placeholderRating={review?.rating}
+                                        emptySymbol={<i className="far fa-star text-warning"></i>}
+                                        placeholderSymbol={<i className="fas fa-star text-warning" />}
+                                        fullSymbol={<i className="fas fa-star text-warning" />}
+                                    /> ({review?.rating}/5)
                                 </Card.Body>
                             </Card>
                         </Col>)

@@ -13,14 +13,14 @@ const AllProducts = () => {
         handleBuyNow(id)
     }
     return (
-        <div className='container my-5 pt-5 text-center'>
+        <div className='container-fluid pb-2 mt-5 pt-5 text-center banner-bg'>
             <NavigationBar />
             <h2 className="fw-bold text-uppercase">Most Sales<span className='purple-text'> Sunglasses</span> </h2>
-            {products.length ? <Row xs={1} md={3} className="gx-4 gy-5 text-start m-2">
+            {products.length ? <Row xs={1} md={3} className="gx-4 gy-5 container mx-auto text-start m-2">
                 {
                     products.map(product => <Col key={product?._id}>
-                        <Card>
-                            <Card.Img variant="top" src={product?.img} className="mx-auto" height="150px" />
+                        <Card className="border-0 py-3 shadow-lg">
+                            <Card.Img variant="top" src={product?.img} className="mx-auto p-3" height="150px" />
                             <Card.Body>
                                 <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
                                 <Card.Text style={{ textAlign: 'justify' }} className="text-secondary">

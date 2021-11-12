@@ -43,7 +43,7 @@ const Review = () => {
                                 placeholder="Message"
                             />
                             <input
-                                {...register("rating", { required: true })}
+                                {...register("rating", { required: true, min: 0, max: 5 })}
                                 className="form-control w-75 mx-auto my-4"
                                 placeholder="Rating out of 5"
                             />

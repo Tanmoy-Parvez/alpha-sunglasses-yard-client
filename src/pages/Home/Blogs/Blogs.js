@@ -10,9 +10,9 @@ const Blogs = () => {
             <h1 className="fw-bold">From The <span className="purple-text">Blogs</span> </h1>
             <Row xs={1} md={3} className="my-3">
                 <Col>
-                    <Card className="border-0 py-3">
+                    <Card className="border-0 py-3 ">
                         <Card.Img variant="top" src={blog1} />
-                        <Card.Body>
+                        <Card.Body className="banner-bg">
                             <Card.Text>
                                 <h6 className="text-secondary"><i className="far fa-clock"></i> 15 September, 2020 <span><i className="fas fa-comments ms-2"></i> Comments(1)</span></h6>
                             </Card.Text>
@@ -25,11 +25,11 @@ const Blogs = () => {
                 <Col>
                     <Card className="border-0 py-3">
                         <Card.Img variant="top" src={blog2} />
-                        <Card.Body>
+                        <Card.Body className="banner-bg">
                             <Card.Text>
                                 <h6 className="text-secondary"><i className="far fa-clock"></i> 25 October, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(3)</span></h6>
                             </Card.Text>
-                            <Card.Title>
+                            <Card.Title >
                                 Blend into the nature
                             </Card.Title>
                         </Card.Body>
@@ -38,7 +38,7 @@ const Blogs = () => {
                 <Col>
                     <Card className="border-0 py-3">
                         <Card.Img variant="top" src={blog3} />
-                        <Card.Body>
+                        <Card.Body className="banner-bg">
                             <Card.Text>
                                 <h6 className="text-secondary"><i className="far fa-clock"></i> 10 August, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(5)</span></h6>
                             </Card.Text>

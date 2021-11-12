@@ -3,27 +3,27 @@ import logo from '../../../images/logo2.png'
 const Footer = () => {
     return (
         <div className="purple-bg pt-5">
-            <div className="row container-fluid text-white mx-auto py-4">
-                <div className="col-md-4 ps-5">
+            <div className="row container-fluid text-white mx-auto pb-2">
+                <div className="col-md-4 ps-3 mt-4">
                     <h6> <i className="fas fa-map-marker-alt fs-5"></i> H#111(5th Floor),Road #10,Mirpur-10</h6>
-                    <h6 className="">Gulshan-2, Dhaka-1212, Bangladesh</h6>
+                    <h6 className="ms-3">Gulshan-2, Dhaka-1212, Bangladesh</h6>
                     <img src={logo} alt="" className="ps-5 w-50 mb-3" />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 mt-4">
                     <h4 className="mb-4">Details</h4>
                     <h6>About</h6>
                     <h6>Our Teams</h6>
                     <h6>Our Policy</h6>
                     <h6>Terms and Conditions</h6>
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 mt-4">
                     <h4 className="mb-4">Quick info</h4>
                     <h6>Sales</h6>
                     <h6>Contact</h6>
                     <h6>Our Blogs</h6>
                     <h6>Reviews</h6>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 mt-4">
                     <h4>About Us</h4>
                     <p className="w-75 pe-4" style={{ textAlign: 'justify' }}>We provide our customers with best of best. Their satisfaction is our main policy.We try to give them best product with good quality and in a cheap rate.</p>
 

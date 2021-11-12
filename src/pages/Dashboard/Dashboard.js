@@ -17,7 +17,7 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const { user, logOut, admin } = useAuth();
     return (
-        <div style={{ height: "100%" }}>
+        <div style={{ height: "100%" }} className="banner-bg">
             <div className="row g-1">
                 <div className="col-md-3 mb-3">
                     <nav className="navbar navbar-dark dark-purple-bg">
@@ -55,7 +55,7 @@ const Dashboard = () => {
                                 </li>
                                 <li className="nav-items">
                                     <Link to={`${url}/pay`}>
-                                        <i className="fas fa-dollar-sign"></i> Payment
+                                        <i className="fas fa-dollar-sign ms-1"></i> Payment
                                     </Link>
                                 </li>
                             </ul>

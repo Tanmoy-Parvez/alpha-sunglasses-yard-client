@@ -39,8 +39,8 @@ const PurchaseForm = () => {
             <NavigationBar />
             <div className="row d-flex align-items-center g-4">
                 <div className="col-md-6 text-center">
-                    <Card className="px-2">
-                        <Card.Img variant="top" src={product?.img} className="p-4 img-fluid w-75 mx-auto" />
+                    <Card className="px-2 py-4 border-0 shadow-lg banner-bg">
+                        <Card.Img variant="top" src={product?.img} className="p-2 img-fluid w-75 mx-auto" />
                         <Card.Body className="text-uppercase text-center">
                             <Card.Title>
                                 <h3 className="purple-text">{product?.name}</h3>
@@ -58,7 +58,7 @@ const PurchaseForm = () => {
                         <button className="btn regular-btn py-2 mt-4">Explore More</button>
                     </Link>
                 </div>
-                <div className="col-md-6 text-center">
+                <div className="col-md-6 text-center mt-5">
                     <div className="py-5 border rounded-3 mx-auto shadow-lg animate__animated animate__backInDown">
                         <img src={logo} alt="" className="w-25" />
                         <h3 className="my-3 text-uppercase purple-text">Order Now Form</h3>

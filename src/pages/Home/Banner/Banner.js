@@ -6,8 +6,8 @@ const Banner = () => {
     return (
         <div className="banner-bg py-3 mt-5">
             <div className="container py-3">
-                <div className="row d-flex align-items-center">
-                    <div className="col-md-6">
+                <div className="row d-flex align-items-center ">
+                    <div className="col-md-6 ps-5 mb-4">
                         <h4>Special offer</h4>
                         <h1 className="text-uppercase fw-bold mt-4">
                             Trendy <span className="purple-text">Glasses</span>
@@ -23,7 +23,7 @@ const Banner = () => {
                         </Link>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center">
-                        <img src={bannerImg} alt="" className="img-fluid w-75 bg-secondary rounded-circle" />
+                        <img src={bannerImg} alt="" className="w-75 purple-bg rounded-circle" height="410px" />
                     </div>
                 </div>
             </div>

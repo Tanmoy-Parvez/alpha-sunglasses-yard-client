@@ -19,7 +19,7 @@ const Products = () => {
             {products.length ? <Row xs={1} md={3} className="gx-4 gy-5 text-start m-3">
                 {
                     products.slice(0, 6).map(product => <Col key={product?._id}>
-                        <Card>
+                        <Card className="border-0 py-3 shadow-lg">
                             <Card.Img variant="top" src={product?.img} className="mx-auto p-3" height="150px" />
                             <Card.Body>
                                 <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
