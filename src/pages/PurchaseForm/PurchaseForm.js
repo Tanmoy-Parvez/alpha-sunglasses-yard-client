@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import logo from '../../images/logo.png'
 import { Card } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
+import NavigationBar from '../Shared/NavigationBar/NavigationBar';
 
 
 const PurchaseForm = () => {
@@ -33,31 +34,30 @@ const PurchaseForm = () => {
     };
     // booking section
     return (
-        <div className="container mb-5" style={{ marginTop: "100px" }}>
+        <div className="container my-5 pt-3">
+            <NavigationBar />
             <div className="row d-flex align-items-center g-4">
                 <div className="col-md-6">
-                    <Card>
-                        <Card.Img variant="top" src={product?.img} />
-                        <Card.Body className="text-uppercase">
-                            <h3 className="text-secondary">{product.country}</h3>
+                    <Card className="px-2">
+                        <Card.Img variant="top" src={product?.img} className="p-4" />
+                        <Card.Body className="text-uppercase text-center">
                             <Card.Title>
-                                <h2>{product?.title}</h2>
+                                <h2 className="purple-text">{product?.name}</h2>
                             </Card.Title>
                             <Card.Text>
                                 <h5 className="text-secondary my-3">{product?.description}</h5>
                             </Card.Text>
-                            <Card.Text className="d-flex justify-content-between px-5">
-                                <h4>{product?.duration}</h4>
-                                <h4 className="text-warning">${product?.price}</h4>
+                            <Card.Text>
+                                <h4 className="purple-text fs-5">Price: <del>$100.00</del> ${product?.price}.00  Only</h4>
                             </Card.Text>
-                            <h5 className="text-white mt-4 bg-info py-2">Please Fill the booking form</h5>
+                            <h5 className="text-white mt-4 purple-bg py-2">Please Fill the order now form</h5>
                         </Card.Body>
                     </Card>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 text-center">
                     <div className="py-5 border rounded-3 mx-auto shadow-lg animate__animated animate__backInDown">
                         <img src={logo} alt="" className="w-25" />
-                        <h3 className="my-3 text-uppercase text-info">Tour Booking Form</h3>
+                        <h3 className="my-3 text-uppercase purple-text">Order Now Form</h3>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             {user?.displayName && <input
                                 defaultValue={user?.displayName}
@@ -77,7 +77,7 @@ const PurchaseForm = () => {
                                 className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0"
                                 placeholder="Date"
                             />
-                            {errors.date && <span className="text-danger">*Give the booking date</span>}
+                            {errors.date && <span className="text-danger">*Give the order date</span>}
                             <input
                                 {...register("address", { required: true })}
                                 className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0 mt-3"
@@ -90,7 +90,7 @@ const PurchaseForm = () => {
                                 className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0 mt-3 "
                                 placeholder="Tour title"
                             />}
-                            <input type="submit" value="Book" className="btn btn-info text-white w-75 mt-4" />
+                            <input type="submit" value="Order Now" className="btn purple-bg text-white w-75 mt-4" />
                         </form>
                     </div>
                 </div>
