@@ -29,11 +29,11 @@ const Reviews = () => {
                 </Col>
                 <Col>
                     <Card className="border-0 py-3">
-                        <Card.Img variant="top" src={img1} className="w-25 mx-auto" />
+                        <i className="fas fa-user-circle my-" style={{ fontSize: "95px" }}></i>
                         <Card.Body>
                             <Card.Title>Nash Patrik</Card.Title>
                             <Card.Text>
-                                <h6 className="pink-text">CEO, Manpol</h6>
+                                <h6 className="pink-text">nash@gmail.com</h6>
                             </Card.Text>
                             <Card.Text>
                                 This is a longer card with supporting text below as a natural

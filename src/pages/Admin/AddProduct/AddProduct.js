@@ -7,7 +7,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post("", data)
+        axios.post("http://localhost:5000/products", data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("New Product Successfully Added😃!")
@@ -15,6 +15,7 @@ const AddProduct = () => {
                 };
             })
     };
+
 
     // add new tour section
     return (

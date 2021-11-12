@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useProducts from '../../../hooks/useProducts';
 
@@ -9,9 +9,9 @@ const Products = () => {
     return (
         <div className='container my-5 text-center'>
             <h2 className="fw-bold text-uppercase">Most Sales<span className='purple-text'> Sunglasses</span> </h2>
-            <Row xs={1} md={3} className="gx-4 gy-5 text-start m-3">
+            {products.length ? <Row xs={1} md={3} className="gx-4 gy-5 text-start m-3">
                 {
-                    products.slice(0, 6).map(product => <Col key={product?.id}>
+                    products.slice(0, 6).map(product => <Col key={product?._id}>
                         <Card>
                             <Card.Img variant="top" src={product?.img} className="mx-auto" height="150px" />
                             <Card.Body>
@@ -27,7 +27,9 @@ const Products = () => {
                         </Card>
                     </Col>)
                 }
-            </Row>
+            </Row> : <div className="d-flex justify-content-center">
+                <Spinner className="my-5" animation="border" variant="primary" />
+            </div>}
             <Link to="/allProducts">
                 <button className="btn regular-btn py-2 mt-4">Explore More</button>
             </Link>
