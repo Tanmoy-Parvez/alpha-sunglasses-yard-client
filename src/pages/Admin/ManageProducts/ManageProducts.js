@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const handleRemoveProduct = (id) => {
         const proceed = window.confirm('Are you sure you want to remove?')
         if (proceed) {
-            fetch(`http://localhost:5000/removeProducts/${id}`, {
+            fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/removeProducts/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })

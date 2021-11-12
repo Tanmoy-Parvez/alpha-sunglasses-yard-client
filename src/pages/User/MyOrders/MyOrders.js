@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     // load all data from data source
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/myOrder/${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email, cancel])
@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleCancel = (id) => {
         const proceed = window.confirm("Are you sure you want to cancel?");
         if (proceed) {
-            fetch(`http://localhost:5000/removeOrder/${id}`, {
+            fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/removeOrder/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })

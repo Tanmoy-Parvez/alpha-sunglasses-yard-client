@@ -82,7 +82,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('http://localhost:5000/saveUser', {
+        fetch('https://alpha-sunglasses-yard-server.herokuapp.com/saveUser', {
             method: method,
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user)
@@ -92,7 +92,7 @@ const useFirebase = () => {
     }
     // check admin or not
     useEffect(() => {
-        fetch(`http://localhost:5000/saveUser/${user?.email}`)
+        fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/saveUser/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setAdmin(data.admin)

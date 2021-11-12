@@ -7,7 +7,7 @@ const ManageOrders = () => {
     const [updated, setUpdated] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders")
+        fetch("https://alpha-sunglasses-yard-server.herokuapp.com/allOrders")
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [cancel, updated])
@@ -16,7 +16,7 @@ const ManageOrders = () => {
     const handleCancel = (id) => {
         const proceed = window.confirm("Are you sure you want to cancel?");
         if (proceed) {
-            fetch(`http://localhost:5000/removeOrder/${id}`, {
+            fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/removeOrder/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })
@@ -34,12 +34,12 @@ const ManageOrders = () => {
     const [order, setOrder] = useState({});
     // handle update status function
     const handleApproved = (id) => {
-        fetch(`http://localhost:5000/allOrders/${id}`)
+        fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/allOrders/${id}`)
             .then((res) => res.json())
             .then((data) => setOrder(data));
         setOrder(order.status = "Approved");
 
-        fetch(`http://localhost:5000/allOrders/${id}`, {
+        fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/allOrders/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(order),

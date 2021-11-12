@@ -16,7 +16,7 @@ const PurchaseForm = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
@@ -25,7 +25,7 @@ const PurchaseForm = () => {
         data.status = "Pending";
         data.price = product?.price;
         data.img = product?.img;
-        axios.post("http://localhost:5000/order", data)
+        axios.post("https://alpha-sunglasses-yard-server.herokuapp.com/order", data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("😃Product Successfully Ordered!")

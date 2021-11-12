@@ -35,7 +35,7 @@ const NavigationBar = () => {
                                     <Link to="/dashboard">Dashboard</Link>
                                 </Nav.Link>
                                 <Nav.Link>
-                                    <Link to="/" className="text-warning">{user?.displayName}</Link>
+                                    <Link to="/" className="fw-bold">{user?.displayName}</Link>
                                 </Nav.Link>
                                 <Nav.Link>
                                     <button onClick={logOut} className="btn btn-outline-none p-0 text-white">
