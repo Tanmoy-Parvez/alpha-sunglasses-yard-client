@@ -3,9 +3,15 @@ import useProducts from '../../hooks/useProducts';
 import { Card, Col, Row, Spinner } from 'react-bootstrap';
 import NavigationBar from '../Shared/NavigationBar/NavigationBar';
 import { Link } from 'react-router-dom';
+import useBuy from '../../hooks/useBuy';
 
 const AllProducts = () => {
     const [products, setProducts] = useProducts();
+    const handleBuyNow = useBuy()
+
+    const handlePurchase = (id) => {
+        handleBuyNow(id)
+    }
     return (
         <div className='container my-5 pt-5 text-center'>
             <NavigationBar />
@@ -23,7 +29,13 @@ const AllProducts = () => {
                                 <Card.Text>
                                     <h4 className="purple-text fs-5">Price: <del>$100.00</del> ${product?.price}.00  Only</h4>
                                 </Card.Text>
-                                <button className="btn purple-bg text-white w-100">Buy Now</button>
+                                <Link to={`/purchase/${product?._id}`}>
+                                    <button
+                                        onClick={() => handlePurchase(product?._id)}
+                                        className="btn purple-bg text-white w-100">
+                                        Buy Now
+                                    </button>
+                                </Link>
                             </Card.Body>
                         </Card>
                     </Col>)

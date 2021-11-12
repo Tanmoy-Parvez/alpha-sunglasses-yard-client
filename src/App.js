@@ -9,6 +9,7 @@ import SignIn from './pages/Login/SignIn/SignIn';
 import SignUp from './pages/Login/SignUp/SignUp';
 import NotFound from './pages/NotFound/NotFound';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
+import PurchaseForm from './pages/PurchaseForm/PurchaseForm';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <PrivateRoute path="/dashboard">
               <Dashboard />
+            </PrivateRoute>
+            <PrivateRoute path="/purchase/:productId">
+              <PurchaseForm />
             </PrivateRoute>
             <Route path="*">
               <NotFound />

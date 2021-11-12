@@ -18,7 +18,6 @@ const Review = () => {
             })
     };
 
-    // add new tour section
     return (
         <div className="container my-3 text-center">
             <div className="row">

@@ -1,11 +1,18 @@
 import React from 'react';
 import { Card, Col, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useBuy from '../../../hooks/useBuy';
 import useProducts from '../../../hooks/useProducts';
 
 
 const Products = () => {
     const [products, setProducts] = useProducts();
+    const handleBuyNow = useBuy()
+
+    const handlePurchase = (id) => {
+        handleBuyNow(id)
+    }
+
     return (
         <div className='container my-5 text-center'>
             <h2 className="fw-bold text-uppercase">Most Sales<span className='purple-text'> Sunglasses</span> </h2>
@@ -22,7 +29,13 @@ const Products = () => {
                                 <Card.Text>
                                     <h4 className="purple-text fs-5">Price: <del>$100.00</del> ${product?.price}.00  Only</h4>
                                 </Card.Text>
-                                <button className="btn purple-bg text-white w-100">Buy Now</button>
+                                <Link to={`/purchase/${product?._id}`}>
+                                    <button
+                                        onClick={() => handlePurchase(product?._id)}
+                                        className="btn purple-bg text-white w-100">
+                                        Buy Now
+                                    </button>
+                                </Link>
                             </Card.Body>
                         </Card>
                     </Col>)
