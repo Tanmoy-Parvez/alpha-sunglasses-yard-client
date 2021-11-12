@@ -42,8 +42,8 @@ const MyOrders = () => {
                 <div className="row mt-2 gx-5 gy-2">
                     {
                         !orders.length ?
-                            <div className="fs-5 my-5 col-md-12">
-                                <Spinner animation="border" variant="info" />
+                            <div className="fs-5 my-5 col-md-12 text-center">
+                                <Spinner animation="border" variant="primary" />
                             </div>
                             :
                             orders.map(order => <div className="col-md-6">

@@ -65,7 +65,7 @@ const PurchaseForm = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             {user?.displayName && <input
                                 defaultValue={user?.displayName}
-                                {...register("fullName", { required: true })}
+                                {...register("username", { required: true })}
                                 className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0"
                                 placeholder="Full Name"
                             />}
@@ -76,18 +76,25 @@ const PurchaseForm = () => {
                                 placeholder="Username or email"
                             />}
                             <input
-                                type="date"
-                                {...register("date", { required: true })}
-                                className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0"
-                                placeholder="Date"
+                                type="tel"
+                                {...register("phone", { required: true })}
+                                className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0 mt-3"
+                                placeholder="Phone Number"
                             />
-                            {errors.date && <span className="text-danger">*Give the order date</span>}
+                            {errors.phone && <span className="text-danger">*This field is required</span>}
                             <input
                                 {...register("address", { required: true })}
                                 className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0 mt-3"
                                 placeholder="Address"
                             />
                             {errors.address && <span className="text-danger">*This field is required</span>}
+                            <input
+                                type="date"
+                                {...register("date", { required: true })}
+                                className="form-control w-75 mx-auto border-bottom border-dark border-top-0 border-start-0 border-end-0 mt-3"
+                                placeholder="Date"
+                            />
+                            {errors.date && <span className="text-danger">*Give the order date</span>}
                             {product?.name && <input
                                 defaultValue={product?.name}
                                 {...register("itemName", { required: true })}

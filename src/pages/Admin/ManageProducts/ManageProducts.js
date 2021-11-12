@@ -23,16 +23,16 @@ const ManageProducts = () => {
         }
     }
     return (
-        <div className='container my-5 text-center'>
-            <h2 className="fw-bold text-uppercase">Manage All<span className='purple-text'> Products</span> </h2>
-            {products.length ? <Row xs={1} md={2} className="g-5 text-start m-2">
+        <div className='container mt-3 text-center'>
+            <h2 className="fw-bold text-uppercase mb-4">Manage All<span className='purple-text'> Products</span> </h2>
+            {products.length ? <Row xs={1} md={2} className="g-5 text-start">
                 {
                     products.map(product => <Col key={product?._id}>
                         <Card className="p-3">
                             <Card.Img variant="top" src={product?.img} className="mx-auto" height="150px" />
                             <Card.Body className="text-center">
                                 <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
-                                <Card.Text className="text-secondary">
+                                <Card.Text className="text-secondary px-4">
                                     {product?.description}
                                 </Card.Text>
                                 <Card.Text>
