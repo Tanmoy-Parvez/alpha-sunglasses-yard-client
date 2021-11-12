@@ -13,7 +13,7 @@ const Products = () => {
                 {
                     products.slice(0, 6).map(product => <Col key={product?._id}>
                         <Card>
-                            <Card.Img variant="top" src={product?.img} className="mx-auto" height="150px" />
+                            <Card.Img variant="top" src={product?.img} className="mx-auto p-3" height="150px" />
                             <Card.Body>
                                 <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
                                 <Card.Text style={{ textAlign: 'justify' }} className="text-secondary">
