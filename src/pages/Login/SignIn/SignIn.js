@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import loginImg from '../../../images/login.png';
 import logo from '../../../images/logo2.png';
 import { useForm } from "react-hook-form";
@@ -6,7 +6,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import NavigationBar from '../../Shared/NavigationBar/NavigationBar';
 import useAuth from '../../../hooks/useAuth';
 const SignIn = () => {
-    const { signInUser } = useAuth()
+    const { signInUser, authError } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -15,6 +15,8 @@ const SignIn = () => {
     const onSubmit = data => {
         signInUser(data.email, data.password, location, history)
     };
+
+
     return (
         <div>
             <NavigationBar />
@@ -47,6 +49,7 @@ const SignIn = () => {
                                     type="submit"
                                     className="btn rounded-pill purple-bg text-white w-75 mx-auto py-2 px-3" >Sign in
                                 </button>
+                                {authError ? <p className="text-danger">Incorrect email or password! try again</p> : <p></p>}
                             </form>
                             <p className="my-3">Let us help you explore more.</p>
                             <p className="my-3">Don't have an account? <Link to="/signUp" className="purple-text">Create an account</Link>.</p>
