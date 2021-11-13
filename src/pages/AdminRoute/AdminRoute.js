@@ -5,7 +5,6 @@ import useAuth from '../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
     const { user, admin, isLoading } = useAuth();
-    console.log(admin);
     if (isLoading) {
         return <div className="text-center my-5">
             <Spinner animation="border" variant="info" />
@@ -15,7 +14,7 @@ const AdminRoute = ({ children, ...rest }) => {
         <Route
             {...rest}
             render={({ location }) =>
-                (admin || user.email) ? (
+                (admin || user?.email) ? (
                     children
                 ) : (
                     <Redirect
