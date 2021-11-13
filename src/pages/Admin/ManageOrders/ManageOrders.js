@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import logo from '../../../images/logo.png'
+import Zoom from 'react-reveal/Zoom';
 
 const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
@@ -13,7 +14,7 @@ const ManageOrders = () => {
             .then(data => setAllOrders(data))
     }, [cancel, updated])
 
-    // handle cancel booking function
+    // handle cancel order 
     const handleCancel = (id) => {
         const proceed = window.confirm("Are you sure you want to cancel?");
         if (proceed) {
@@ -33,7 +34,7 @@ const ManageOrders = () => {
 
     // update status
     const [order, setOrder] = useState({});
-    // handle update status function
+    // handle update status
     const handleApproved = (id) => {
         fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/allOrders/${id}`)
             .then((res) => res.json())
@@ -53,7 +54,7 @@ const ManageOrders = () => {
                 }
             });
     }
-    // manage all orders section
+    // manage all orders 
     return (
         <div className="px-2 mb-5">
             <h5 className="purple-text text-uppercase text-center pt-2">
@@ -63,26 +64,28 @@ const ManageOrders = () => {
             <div className="row">
                 {
                     allOrders.map(allOrder => <div className="col-md-4">
-                        <Card className="mb-2 text-white purple-bg">
-                            <Card.Header>{allOrder?.itemName} ({allOrder.status})</Card.Header>
-                            <Card.Body>
-                                <Card.Title><i className="fas fa-user" /> {allOrder?.username}</Card.Title>
-                                <Card.Text>
-                                    <h6><i className="fas fa-envelope" /> {allOrder?.email}</h6>
-                                    <h6><i className="fas fa-phone-alt" /> {allOrder?.phone}</h6>
-                                    <h6><i className="fas fa-map-marker-alt" /> {allOrder?.address}</h6>
-                                </Card.Text>
-                                <button
-                                    onClick={() => handleApproved(allOrder?._id)}
-                                    className="btn btn-outline-success text-white me-3">
-                                    Shipped
-                                </button>
-                                <button
-                                    onClick={() => handleCancel(allOrder?._id)}
-                                    className="btn btn-outline-danger text-light">
-                                    Cancel</button>
-                            </Card.Body>
-                        </Card>
+                        <Zoom>
+                            <Card className="mb-2 text-white purple-bg">
+                                <Card.Header>{allOrder?.itemName} ({allOrder.status})</Card.Header>
+                                <Card.Body>
+                                    <Card.Title><i className="fas fa-user" /> {allOrder?.username}</Card.Title>
+                                    <Card.Text>
+                                        <h6><i className="fas fa-envelope" /> {allOrder?.email}</h6>
+                                        <h6><i className="fas fa-phone-alt" /> {allOrder?.phone}</h6>
+                                        <h6><i className="fas fa-map-marker-alt" /> {allOrder?.address}</h6>
+                                    </Card.Text>
+                                    <button
+                                        onClick={() => handleApproved(allOrder?._id)}
+                                        className="btn btn-outline-success text-white me-3">
+                                        Shipped
+                                    </button>
+                                    <button
+                                        onClick={() => handleCancel(allOrder?._id)}
+                                        className="btn btn-outline-danger text-light">
+                                        Cancel</button>
+                                </Card.Body>
+                            </Card>
+                        </Zoom>
                     </div>
                     )
                 }

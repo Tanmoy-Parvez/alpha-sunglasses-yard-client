@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Row, Spinner } from 'react-bootstrap';
-import Rating from "react-rating"
+import Rating from "react-rating";
+import Zoom from 'react-reveal/Zoom';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -17,32 +18,34 @@ const Reviews = () => {
             {reviews?.length ?
                 <Row xs={1} md={3} className="g-5">
                     {
-                        reviews.map(review => <Col key={review?.id}>
-                            <Card className="border-0 py-3">
+                        reviews.map(review => <Zoom>
+                            <Col key={review?.id}>
+                                <Card className="border-0 py-3">
 
-                                {review?.img ? <Card.Img variant="top" src={review?.img} className="mx-auto w-25" />
-                                    :
-                                    <i className="fas fa-user-circle my-" style={{ fontSize: "95px" }}></i>
-                                }
+                                    {review?.img ? <Card.Img variant="top" src={review?.img} className="mx-auto w-25" />
+                                        :
+                                        <i className="fas fa-user-circle my-" style={{ fontSize: "95px" }}></i>
+                                    }
 
-                                <Card.Body className="px-4">
-                                    <Card.Title>{review?.name}</Card.Title>
-                                    <Card.Text>
-                                        <h6 className="pink-text">{review?.email}</h6>
-                                    </Card.Text>
-                                    <Card.Text>
-                                        {review?.message}
-                                    </Card.Text>
-                                    <Rating
-                                        readonly
-                                        placeholderRating={review?.rating}
-                                        emptySymbol={<i className="far fa-star text-warning"></i>}
-                                        placeholderSymbol={<i className="fas fa-star text-warning" />}
-                                        fullSymbol={<i className="fas fa-star text-warning" />}
-                                    /> ({review?.rating}/5)
-                                </Card.Body>
-                            </Card>
-                        </Col>)
+                                    <Card.Body className="px-4">
+                                        <Card.Title>{review?.name}</Card.Title>
+                                        <Card.Text>
+                                            <h6 className="pink-text">{review?.email}</h6>
+                                        </Card.Text>
+                                        <Card.Text>
+                                            {review?.message}
+                                        </Card.Text>
+                                        <Rating
+                                            readonly
+                                            placeholderRating={review?.rating}
+                                            emptySymbol={<i className="far fa-star text-warning"></i>}
+                                            placeholderSymbol={<i className="fas fa-star text-warning" />}
+                                            fullSymbol={<i className="fas fa-star text-warning" />}
+                                        /> ({review?.rating}/5)
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Zoom>)
                     }
                 </Row>
                 :

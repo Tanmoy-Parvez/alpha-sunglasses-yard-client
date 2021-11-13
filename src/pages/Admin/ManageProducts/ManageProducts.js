@@ -1,6 +1,7 @@
 import React from 'react';
 import useProducts from '../../../hooks/useProducts';
 import { Card, Col, Row, Spinner } from 'react-bootstrap';
+import Zoom from 'react-reveal/Zoom';
 
 const ManageProducts = () => {
     const [products, setProducts] = useProducts();
@@ -27,21 +28,23 @@ const ManageProducts = () => {
             <h2 className="fw-bold text-uppercase mb-4">Manage All<span className='purple-text'> Products</span> </h2>
             {products.length ? <Row xs={1} md={2} className="gy-5 gx-4 text-start container mx-auto mb-4">
                 {
-                    products.map(product => <Col key={product?._id}>
-                        <Card className="px-2 py-4 border-0">
-                            <Card.Img variant="top" src={product?.img} className="px-2 mx-auto" height="150px" />
-                            <Card.Body className="text-center">
-                                <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
-                                <Card.Text className="text-secondary px-4">
-                                    {product?.description}
-                                </Card.Text>
-                                <Card.Text>
-                                    <h4 className="purple-text fs-5">Price: <del>$100.00</del> ${product?.price}.00  Only</h4>
-                                </Card.Text>
-                                <button onClick={() => handleRemoveProduct(product?._id)} className="btn btn-danger text-white w-100">Remove</button>
-                            </Card.Body>
-                        </Card>
-                    </Col>)
+                    products.map(product => <Zoom>
+                        <Col key={product?._id}>
+                            <Card className="px-2 py-4 border-0">
+                                <Card.Img variant="top" src={product?.img} className="px-2 mx-auto" height="150px" />
+                                <Card.Body className="text-center">
+                                    <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
+                                    <Card.Text className="text-secondary px-4">
+                                        {product?.description}
+                                    </Card.Text>
+                                    <Card.Text>
+                                        <h4 className="purple-text fs-5">Price: <del>$100.00</del> ${product?.price}.00  Only</h4>
+                                    </Card.Text>
+                                    <button onClick={() => handleRemoveProduct(product?._id)} className="btn btn-danger text-white w-100">Remove</button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Zoom>)
                 }
             </Row> : <div className="d-flex justify-content-center">
                 <Spinner className="my-5" animation="border" variant="primary" />

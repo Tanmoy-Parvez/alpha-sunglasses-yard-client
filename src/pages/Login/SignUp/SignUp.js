@@ -31,10 +31,10 @@ const SignUp = () => {
             <NavigationBar />
             <div className="container my-4 pt-5">
                 <div className="row d-flex align-items-center">
-                    <div className="col-md-7">
+                    <div className="col-md-7 animate__animated animate__backInRight">
                         <img src={loginImg} alt="" className="img-fluid" />
                     </div>
-                    <div className="col-md-5 text-center">
+                    <div className="col-md-5 text-center animate__animated animate__backInLeft">
                         <div className="rounded-3 mx-auto shadow-lg py-4 mt-2">
                             <img src={logo} alt="" className="w-25" />
                             <h5 className="my-3 text-uppercase purple-text">Explore More By Sign Up</h5>

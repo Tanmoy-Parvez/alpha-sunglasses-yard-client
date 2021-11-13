@@ -45,7 +45,7 @@ const MyOrders = () => {
                                 <Spinner animation="border" variant="primary" />
                             </div>
                             :
-                            orders.map(order => <div className="col-md-6">
+                            orders.map(order => <div className="col-md-6 animate__animated animate__backInUp">
                                 <div className="card mb-3">
                                     <div className="row">
                                         <div className="col-md-4">

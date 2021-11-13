@@ -22,7 +22,7 @@ const Review = () => {
         <div className="container my-3 text-center">
             <div className="row">
                 <div className="col-md-2"></div>
-                <div className="col-md-8">
+                <div className="col-md-8 animate__animated animate__backInUp">
                     <div className="pb-5 pt-3 rounded-3 mx-auto shadow-lg">
                         <img src={logo} alt="" className="w-25" />
                         <h4 className="my-4 text-uppercase purple-text">Give your valuable Review</h4>

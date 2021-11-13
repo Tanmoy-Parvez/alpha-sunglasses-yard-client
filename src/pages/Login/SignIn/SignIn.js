@@ -22,10 +22,10 @@ const SignIn = () => {
             <NavigationBar />
             <div className="container mt-5 pt-5">
                 <div className="row d-flex align-items-center">
-                    <div className="col-md-7">
+                    <div className="col-md-7 animate__animated animate__backInLeft">
                         <img src={loginImg} alt="" className="img-fluid" />
                     </div>
-                    <div className="col-md-5 text-center mt-3">
+                    <div className="col-md-5 text-center mt-3 animate__animated animate__backInRight">
                         <div className="mx-auto shadow-lg py-4 rounded-3">
                             <img src={logo} alt="" className="w-25" />
                             <h4 className="my-3 text-uppercase purple-text">Explore More By Sign in</h4>

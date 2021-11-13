@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="banner-bg py-3 mt-5">
             <div className="container py-3">
                 <div className="row d-flex align-items-center ">
-                    <div className="col-md-6 ps-5 mb-4">
+                    <div className="col-md-6 ps-5 mb-4 animate__animated animate__backInLeft">
                         <h4>Special offer</h4>
                         <h1 className="text-uppercase fw-bold mt-4">
                             Trendy <span className="purple-text">Glasses</span>
@@ -22,7 +22,7 @@ const Banner = () => {
                             <button className="btn regular-btn py-2">Explore More</button>
                         </Link>
                     </div>
-                    <div className="col-md-6 d-flex justify-content-center">
+                    <div className="col-md-6 d-flex justify-content-center animate__animated animate__backInRight">
                         <img src={bannerImg} alt="" className="w-75 purple-bg rounded-circle" height="410px" />
                     </div>
                 </div>
