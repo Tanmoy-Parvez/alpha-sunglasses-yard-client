@@ -25,6 +25,9 @@ const NavigationBar = () => {
                         <Nav.Link>
                             <Link to="/home">Home</Link>
                         </Nav.Link>
+                        <Nav.Link>
+                            <Link to="/allProducts">Explore</Link>
+                        </Nav.Link>
 
                         {!user?.email ? <Nav.Link>
                             <Link to="/signIn">Login</Link>

@@ -3,7 +3,6 @@ import { Spinner } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 
-
 const MyOrders = () => {
 
     const [orders, setOrders] = useState([]);
@@ -34,9 +33,9 @@ const MyOrders = () => {
                 })
         }
     }
-    // my bookings section
+    // my orders section
     return (
-        <div className="mt-2">
+        <div className="mt-3">
             <h1 className="text-center purple-text text-uppercase">My All Orders</h1>
             <div className="container">
                 <div className="row mt-2 gx-5 gy-2">

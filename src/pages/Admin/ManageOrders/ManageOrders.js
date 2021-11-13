@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
+import logo from '../../../images/logo.png'
 
 const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
@@ -23,7 +24,7 @@ const ManageOrders = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert("Booking successfully cancelled!")
+                        alert("Order successfully cancelled!")
                         setCancel(!cancel)
                     };
                 })
@@ -37,7 +38,7 @@ const ManageOrders = () => {
         fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/allOrders/${id}`)
             .then((res) => res.json())
             .then((data) => setOrder(data));
-        setOrder(order.status = "Approved");
+        setOrder(order.status = "Shipped");
 
         fetch(`https://alpha-sunglasses-yard-server.herokuapp.com/allOrders/${id}`, {
             method: "PUT",
@@ -47,7 +48,7 @@ const ManageOrders = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.modifiedCount > 0) {
-                    alert("Order Approved successfully!");
+                    alert("Order Shipped successfully!");
                     setUpdated(!updated)
                 }
             });
@@ -65,16 +66,16 @@ const ManageOrders = () => {
                         <Card className="mb-2 text-white purple-bg">
                             <Card.Header>{allOrder?.itemName} ({allOrder.status})</Card.Header>
                             <Card.Body>
-                                <Card.Title>Name: {allOrder?.username}</Card.Title>
+                                <Card.Title><i className="fas fa-user" /> {allOrder?.username}</Card.Title>
                                 <Card.Text>
-                                    <h6> Email: {allOrder?.email}</h6>
-                                    <h6>Mobile: {allOrder?.phone}</h6>
-                                    <h6>Add: {allOrder?.address}</h6>
+                                    <h6><i className="fas fa-envelope" /> {allOrder?.email}</h6>
+                                    <h6><i className="fas fa-phone-alt" /> {allOrder?.phone}</h6>
+                                    <h6><i className="fas fa-map-marker-alt" /> {allOrder?.address}</h6>
                                 </Card.Text>
                                 <button
                                     onClick={() => handleApproved(allOrder?._id)}
                                     className="btn btn-outline-success text-white me-3">
-                                    Approve
+                                    Shipped
                                 </button>
                                 <button
                                     onClick={() => handleCancel(allOrder?._id)}
@@ -85,6 +86,9 @@ const ManageOrders = () => {
                     </div>
                     )
                 }
+            </div>
+            <div className="mb-5 text-center" style={{ opacity: "0.1" }}>
+                <img src={logo} />
             </div>
         </div>
     );

@@ -34,6 +34,7 @@ const Reviews = () => {
                                         {review?.message}
                                     </Card.Text>
                                     <Rating
+                                        readonly
                                         placeholderRating={review?.rating}
                                         emptySymbol={<i className="far fa-star text-warning"></i>}
                                         placeholderSymbol={<i className="fas fa-star text-warning" />}

@@ -55,7 +55,7 @@ const PurchaseForm = () => {
                         </Card.Body>
                     </Card>
                     <Link to="/allProducts">
-                        <button className="btn regular-btn py-2 mt-4">Explore More</button>
+                        <button className="btn regular-btn py-2 mt-4">Purchase More</button>
                     </Link>
                 </div>
                 <div className="col-md-6 text-center mt-5">
