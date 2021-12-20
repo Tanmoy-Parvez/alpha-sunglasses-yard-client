@@ -37,6 +37,7 @@ const MyOrders = () => {
     return (
         <div className="mt-3">
             <h1 className="text-center purple-text text-uppercase">My All Orders</h1>
+            <h6 className="text-center purple-text text-uppercase">The number of your order: {orders.length} </h6>
             <div className="container">
                 <div className="row mt-2 gx-5 gy-2">
                     {

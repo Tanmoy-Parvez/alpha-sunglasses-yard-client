@@ -11,6 +11,8 @@ import SignUp from './pages/Login/SignUp/SignUp';
 import NotFound from './pages/NotFound/NotFound';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import PurchaseForm from './pages/PurchaseForm/PurchaseForm';
+import ContactForm from './pages/ContactForm/ContactForm';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
             </Route>
             <Route path="/allProducts">
               <AllProducts />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <ContactForm />
             </Route>
             <Route path="/signIn">
               <SignIn />

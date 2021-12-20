@@ -23,9 +23,9 @@ const Products = () => {
                         <Col key={product?._id}>
                             <Card className="border-0 py-3 shadow-lg">
                                 <Card.Img variant="top" src={product?.img} className="mx-auto p-3" height="150px" />
-                                <Card.Body>
+                                <Card.Body className="text-center">
                                     <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
-                                    <Card.Text style={{ textAlign: 'justify' }} className="text-secondary">
+                                    <Card.Text className="text-secondary">
                                         {product?.description}
                                     </Card.Text>
                                     <Card.Text>

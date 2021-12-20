@@ -13,7 +13,7 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div className='banner-bg my-5 p-5 text-center'>
+        <div className='banner-bg my-5 p-5 text-center' id="reviews">
             <h2 className="fw-bold text-uppercase mb-4">Customers <span className="purple-text">Reviews</span> </h2>
             {reviews?.length ?
                 <Row xs={1} md={3} className="g-5">

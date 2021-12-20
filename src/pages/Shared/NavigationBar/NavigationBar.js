@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo2.png'
 
@@ -28,7 +29,18 @@ const NavigationBar = () => {
                         <Nav.Link>
                             <Link to="/allProducts">Explore</Link>
                         </Nav.Link>
-
+                        <Nav.Link as={NavHashLink} to="/home#reviews" className="hashLink">
+                            Review
+                        </Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#blog" className="hashLink">
+                            Blog
+                        </Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#about" className="hashLink">
+                            About
+                        </Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#contact" className="hashLink">
+                            Contact
+                        </Nav.Link>
                         {!user?.email ? <Nav.Link>
                             <Link to="/signIn">Login</Link>
                         </Nav.Link>

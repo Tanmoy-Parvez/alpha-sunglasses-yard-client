@@ -1,5 +1,7 @@
 # Alpha Sunglasses Yard
 
+## Admin Email: admin@gmail.com Pass: 123456abc
+
 ## Description:
 
 <p>

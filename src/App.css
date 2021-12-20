@@ -32,3 +32,11 @@
   margin-top: 10px;
   font-size: 18px;
 }
+
+.hashLink {
+  color: white !important;
+}
+
+.hashLink:hover {
+  color: #320f55 !important;
+}

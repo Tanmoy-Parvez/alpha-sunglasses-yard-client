@@ -6,7 +6,7 @@ import blog3 from '../../../images/blog-img/blog3.jpg'
 import Zoom from 'react-reveal/Zoom';
 const Blogs = () => {
     return (
-        <div className="container text-center text-uppercase">
+        <div className="container text-center text-uppercase" id="blog">
             <h1 className="fw-bold">From The <span className="purple-text">Blogs</span> </h1>
             <Row xs={1} md={3} className="my-3">
                 <Zoom>
