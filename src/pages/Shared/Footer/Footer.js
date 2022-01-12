@@ -2,8 +2,8 @@ import React from 'react';
 import logo from '../../../images/logo2.png'
 const Footer = () => {
     return (
-        <div className="purple-bg pt-5">
-            <div className="row container-fluid text-white mx-auto pb-2">
+        <div className="banner-bg pt-5">
+            <div className="row container-fluid text-secondary mx-auto pb-2">
                 <div className="col-md-4 ps-3 mt-4">
                     <h6> <i className="fas fa-map-marker-alt fs-5"></i> H#111(5th Floor),Road #10,Mirpur-10</h6>
                     <h6 className="ms-3">Gulshan-2, Dhaka-1212, Bangladesh</h6>

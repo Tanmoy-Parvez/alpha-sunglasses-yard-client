@@ -8,7 +8,7 @@ import logo from '../../../images/logo2.png'
 const NavigationBar = () => {
     const { user, logOut } = useAuth()
     return (
-        <Navbar collapseOnSelect expand="lg" fixed="top" className="purple-bg" variant="dark">
+        <Navbar collapseOnSelect expand="lg" fixed="top" className="bg-light">
             <Container>
                 <Navbar.Brand href="#home">
                     <img
@@ -18,7 +18,7 @@ const NavigationBar = () => {
                         height="30"
                         className="d-inline-block align-top"
                     />{' '}
-                    Alpha Sunglasses Yard
+                    <span className="text-uppercase purple-text">Alpha Sunglasses Yard</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -53,7 +53,7 @@ const NavigationBar = () => {
                                     <Link to="/" className="fw-bold">{user?.displayName}</Link>
                                 </Nav.Link>
                                 <Nav.Link>
-                                    <button onClick={logOut} className="btn btn-outline-none p-0 text-white">
+                                    <button onClick={logOut} className="btn btn-outline-none p-0 text-danger fw-bold pb-1">
                                         <i className="fas fa-sign-out-alt"></i>  Logout
                                     </button>
                                 </Nav.Link>

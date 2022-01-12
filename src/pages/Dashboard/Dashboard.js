@@ -17,9 +17,9 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const { user, logOut, admin } = useAuth();
     return (
-        <div style={{ height: "100%" }} className="banner-bg">
+        <div className="banner-bg">
             <div className="row g-1">
-                <div className="col-md-3 mb-3">
+                <div className="col-md-3 mb-3" style={{ minHeight: "100vh" }}>
                     <nav className="navbar navbar-dark dark-purple-bg">
                         <div className="container">
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,24 +36,24 @@ const Dashboard = () => {
                                 <i className="fas fa-user-circle"></i> {user?.displayName}
                             </h4>}
                             <ul className="menu-list">
-                                <li className="nav-items">
+                                <li className="dashboard-items">
                                     <Link to="/">
                                         <i className="fas fa-home"></i> Home
                                     </Link>
                                 </li>
                             </ul>
                             {!admin ? <ul className="menu-list text-start">
-                                <li className="nav-items">
+                                <li className="dashboard-items">
                                     <Link to={`${url}/myorders`}>
                                         <i className="fas fa-shopping-cart"></i>  My Orders
                                     </Link>
                                 </li>
-                                <li className="nav-items">
+                                <li className="dashboard-items">
                                     <Link to={`${url}/review`}>
                                         <i className="fas fa-star"></i> Review
                                     </Link>
                                 </li>
-                                <li className="nav-items">
+                                <li className="dashboard-items">
                                     <Link to={`${url}/pay`}>
                                         <i className="fas fa-dollar-sign ms-1"></i> Payment
                                     </Link>
@@ -61,22 +61,22 @@ const Dashboard = () => {
                             </ul>
                                 :
                                 <ul className="menu-list">
-                                    <li className="nav-items">
+                                    <li className="dashboard-items">
                                         <Link to={`${url}/addProduct`}>
                                             <i className="fas fa-plus-circle"></i> Add A Product
                                         </Link>
                                     </li>
-                                    <li className="nav-items">
+                                    <li className="dashboard-items">
                                         <Link to={`${url}/makeAdmin`}>
                                             <i className="fas fa-user-plus"></i> Make An Admin
                                         </Link>
                                     </li>
-                                    <li className="nav-items">
+                                    <li className="dashboard-items">
                                         <Link to={`${url}/manageOrders`}>
                                             <i className="fas fa-tasks"></i>  Manage All Orders
                                         </Link>
                                     </li>
-                                    <li className="nav-items">
+                                    <li className="dashboard-items">
                                         <Link to={`${url}/manageProducts`}>
                                             <i className="fas fa-cart-plus"></i> Manage Products
                                         </Link>
@@ -88,7 +88,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-9" style={{ height: "100%" }}>
+                <div className="col-md-9" style={{ minHeight: "100vh" }}>
                     <div className="dark-purple-bg text-center text-light text-uppercase py-2">
                         <h3>Welcome Back {user?.displayName}</h3>
                     </div>

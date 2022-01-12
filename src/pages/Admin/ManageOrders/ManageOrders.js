@@ -57,10 +57,10 @@ const ManageOrders = () => {
     // manage all orders 
     return (
         <div className="px-2 mb-5">
-            <h5 className="purple-text text-uppercase text-center pt-2">
-                <i>All the orders are below</i>
+            <h5 className="text-uppercase text-warning text-center pt-2">
+                All the orders are below
             </h5>
-            <h3 className="text-uppercase text-warning text-center mb-4">Manage All The Ordered Products</h3>
+            <h3 className="text-uppercase purple-text text-center mb-4">Manage All The Ordered Products</h3>
             <div className="row">
                 {
                     allOrders.map(allOrder => <div className="col-md-4">
@@ -76,12 +76,12 @@ const ManageOrders = () => {
                                     </Card.Text>
                                     <button
                                         onClick={() => handleApproved(allOrder?._id)}
-                                        className="btn btn-outline-success text-white me-3">
+                                        className="btn btn-outline-light text-white me-3">
                                         Shipped
                                     </button>
                                     <button
                                         onClick={() => handleCancel(allOrder?._id)}
-                                        className="btn btn-outline-danger text-light">
+                                        className="btn btn-outline-light text-light">
                                         Cancel</button>
                                 </Card.Body>
                             </Card>
@@ -89,9 +89,6 @@ const ManageOrders = () => {
                     </div>
                     )
                 }
-            </div>
-            <div className="mb-5 text-center" style={{ opacity: "0.1" }}>
-                <img src={logo} />
             </div>
         </div>
     );

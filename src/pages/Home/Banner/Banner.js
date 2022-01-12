@@ -23,7 +23,7 @@ const Banner = () => {
                         </Link>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center animate__animated animate__backInRight">
-                        <img src={bannerImg} alt="" className="w-75 purple-bg rounded-circle" height="410px" />
+                        <img src={bannerImg} alt="" className="purple-bg rounded-circle img-fluid" width="400px" />
                     </div>
                 </div>
             </div>

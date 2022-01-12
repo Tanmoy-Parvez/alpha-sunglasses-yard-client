@@ -21,20 +21,20 @@ const Products = () => {
                 {
                     products.slice(0, 6).map(product => <Zoom>
                         <Col key={product?._id}>
-                            <Card className="border-0 py-3 shadow-lg">
+                            <Card className="border p-3">
                                 <Card.Img variant="top" src={product?.img} className="mx-auto p-3" height="150px" />
                                 <Card.Body className="text-center">
-                                    <Card.Title className="text-uppercase purple-text">{product?.name}</Card.Title>
+                                    <Card.Title className="text-uppercase purple-text fs-6">{product?.name}</Card.Title>
                                     <Card.Text className="text-secondary">
-                                        {product?.description}
+                                        {product?.description.slice(0, 58)}
                                     </Card.Text>
                                     <Card.Text>
-                                        <h4 className="purple-text fs-5">Price: <del>$100.00</del> ${product?.price}.00  Only</h4>
+                                        <h4 className="purple-text fs-5">${product?.price}.00</h4>
                                     </Card.Text>
                                     <Link to={`/purchase/${product?._id}`}>
                                         <button
                                             onClick={() => handlePurchase(product?._id)}
-                                            className="btn purple-bg text-white w-100">
+                                            className="btn py-2 regular-btn w-100">
                                             Buy Now
                                         </button>
                                     </Link>

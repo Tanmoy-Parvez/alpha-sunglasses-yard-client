@@ -3,7 +3,10 @@
   color: #fff;
   padding: 0px 30px;
 }
-
+.regular-btn:hover {
+  background-color: #fdfdfd;
+  border: 1px solid #5b54f1;
+}
 .banner-bg {
   background-color: #5c54f113;
 }
@@ -20,11 +23,12 @@
 
 .nav-items a {
   text-decoration: none;
-  color: #ffffff;
+  color: gray;
+  font-weight: 500;
 }
 
 .nav-items a:hover {
-  color: #320f55;
+  color: #590ea3;
 }
 
 .menu-list li {
@@ -34,9 +38,19 @@
 }
 
 .hashLink {
-  color: white !important;
+  color: gray !important;
 }
 
 .hashLink:hover {
-  color: #320f55 !important;
+  color: #590ea3 !important;
+}
+
+.dashboard-items a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+.dashboard-items a:hover {
+  color: #350564;
 }
